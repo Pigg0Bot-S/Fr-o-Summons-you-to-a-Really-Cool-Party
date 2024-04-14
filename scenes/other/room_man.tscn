@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp0h6ws3orcxr"]
+
+[ext_resource type="Script" path="res://scenes/other/room_man.gd" id="1_p872t"]
+
+[node name="RoomMan" type="Node"]
+script = ExtResource("1_p872t")
+
+[node name="Black" type="ColorRect" parent="."]
+z_index = 1
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="finish_fade" from="." to="." method="_on_finish_fade"]

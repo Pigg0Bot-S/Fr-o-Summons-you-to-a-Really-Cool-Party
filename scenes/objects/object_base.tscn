@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://comk7kt2bdaj8"]
+
+[ext_resource type="Script" path="res://scenes/objects/object_base.gd" id="1_g10jl"]
+
+[node name="ObjectBase" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_g10jl")

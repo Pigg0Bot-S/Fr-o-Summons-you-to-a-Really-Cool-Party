@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://60keftn7r47w"]
+
+[ext_resource type="Texture2D" uid="uid://cskmyy5aecusq" path="res://assets/sprites/backgrounds/stuipd_bedroom.png" id="1_ha0eo"]
+[ext_resource type="Script" path="res://scenes/rooms/room_2d.gd" id="1_v6aav"]
+
+[node name="Room2D" type="Sprite2D"]
+texture = ExtResource("1_ha0eo")
+centered = false
+script = ExtResource("1_v6aav")

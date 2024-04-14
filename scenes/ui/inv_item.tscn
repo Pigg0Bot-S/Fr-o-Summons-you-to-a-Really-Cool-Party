@@ -1,0 +1,105 @@
+[gd_scene load_steps=9 format=3 uid="uid://ruodeje7v6bd"]
+
+[ext_resource type="Script" path="res://scenes/ui/inv_item.gd" id="1_2il0i"]
+[ext_resource type="AudioStream" uid="uid://daxunho1ft3tp" path="res://assets/sfx/item_pickup.wav" id="1_ti0ei"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvuy1"]
+size = Vector2(30, 30)
+
+[sub_resource type="Gradient" id="Gradient_f1p1e"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u7e8d"]
+gradient = SubResource("Gradient_f1p1e")
+width = 30
+height = 30
+
+[sub_resource type="Animation" id="Animation_cnjyy"]
+resource_name = "startup"
+length = 0.8
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("1_ti0ei")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.1, 1.99999, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8)
+}
+
+[sub_resource type="Animation" id="Animation_31lru"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dpxuv"]
+_data = {
+"RESET": SubResource("Animation_31lru"),
+"startup": SubResource("Animation_cnjyy")
+}
+
+[node name="InvItem" type="Area2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_2il0i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pvuy1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1e-05, 1e-05)
+texture = SubResource("GradientTexture2D_u7e8d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dpxuv")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

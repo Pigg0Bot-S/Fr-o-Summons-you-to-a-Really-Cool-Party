@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7x3masucbk25"]
+
+[ext_resource type="PackedScene" uid="uid://comk7kt2bdaj8" path="res://scenes/objects/object_base.tscn" id="1_i4mkm"]
+[ext_resource type="Script" path="res://scenes/objects/door_base.gd" id="2_ftlik"]
+[ext_resource type="AudioStream" uid="uid://ctgejhpxvyg8v" path="res://assets/sfx/door_open.wav" id="3_pg1be"]
+
+[node name="DoorBase" instance=ExtResource("1_i4mkm")]
+script = ExtResource("2_ftlik")
+target_room = ""
+open_sound = ExtResource("3_pg1be")
+object_id = "door#"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="0"]
+process_mode = 3

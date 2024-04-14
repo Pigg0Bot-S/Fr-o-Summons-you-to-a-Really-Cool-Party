@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cj0ckdvkcce18"
+path="res://.godot/imported/Sneaky Snitch.mp3-ab12679532ff93b11876c92e055f446a.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Sneaky Snitch.mp3"
+dest_files=["res://.godot/imported/Sneaky Snitch.mp3-ab12679532ff93b11876c92e055f446a.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

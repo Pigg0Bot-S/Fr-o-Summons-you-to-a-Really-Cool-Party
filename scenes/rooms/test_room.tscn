@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqfnilaxvdl5u"]
+
+[ext_resource type="Texture2D" uid="uid://cskmyy5aecusq" path="res://assets/sprites/backgrounds/stuipd_bedroom.png" id="1_h1ut4"]
+[ext_resource type="Script" path="res://scenes/rooms/room_2d.gd" id="2_x7yq5"]
+[ext_resource type="PackedScene" uid="uid://d286nfbsnjbii" path="res://scenes/objects/test_portal.tscn" id="3_j0kpf"]
+
+[node name="Room2D" type="Sprite2D"]
+texture = ExtResource("1_h1ut4")
+centered = false
+script = ExtResource("2_x7yq5")
+
+[node name="TestPortal" parent="." instance=ExtResource("3_j0kpf")]
+position = Vector2(272, 118)

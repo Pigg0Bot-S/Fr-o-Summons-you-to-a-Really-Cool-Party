@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://byxs7qu5y2h0i"]
+
+[ext_resource type="Texture2D" uid="uid://bcy2vvh7bpu1g" path="res://assets/sprites/backgrounds/stupid_bedroom.png" id="1_louxp"]
+[ext_resource type="Script" path="res://scenes/rooms/room_2d.gd" id="2_fvaw8"]
+[ext_resource type="PackedScene" uid="uid://bkrxt13thiumv" path="res://scenes/objects/door_1.tscn" id="4_kch3o"]
+[ext_resource type="PackedScene" uid="uid://comk7kt2bdaj8" path="res://scenes/objects/object_base.tscn" id="4_n18d0"]
+
+[node name="IntroRoom" type="Sprite2D"]
+texture = ExtResource("1_louxp")
+centered = false
+script = ExtResource("2_fvaw8")
+song = "sneaky_snitch"
+
+[node name="ObjectBase" parent="." instance=ExtResource("4_n18d0")]
+object_id = "test"
+
+[node name="Door1" parent="." instance=ExtResource("4_kch3o")]
+position = Vector2(96, 146)
