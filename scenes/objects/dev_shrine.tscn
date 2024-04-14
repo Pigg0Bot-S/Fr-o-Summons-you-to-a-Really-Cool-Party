@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlscoth2ul7ok"]
+
+[ext_resource type="PackedScene" uid="uid://comk7kt2bdaj8" path="res://scenes/objects/object_base.tscn" id="1_7ahnl"]
+[ext_resource type="Script" path="res://scenes/objects/dev_shrine.gd" id="2_tp6sf"]
+
+[sub_resource type="Gradient" id="Gradient_qn2es"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_q1tcp"]
+gradient = SubResource("Gradient_qn2es")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jx7ug"]
+size = Vector2(64, 64)
+
+[node name="DevShrine" instance=ExtResource("1_7ahnl")]
+collision_mask = 5
+script = ExtResource("2_tp6sf")
+object_id = "dev_shrine"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = SubResource("GradientTexture2D_q1tcp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_jx7ug")

@@ -71,3 +71,6 @@ func _unhovered():
 
 func object_hovered(new_hover: bool):
 	pass
+
+func _item_interact(item : String, item_node : Area2D):
+	pass
