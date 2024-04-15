@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://0vff4ahlh7f2"]
+[gd_scene load_steps=7 format=3 uid="uid://0vff4ahlh7f2"]
 
 [ext_resource type="Script" path="res://scenes/other/god.gd" id="1_itcv6"]
 [ext_resource type="PackedScene" uid="uid://bp0h6ws3orcxr" path="res://scenes/other/room_man.tscn" id="1_pxewq"]
 [ext_resource type="PackedScene" uid="uid://cvibkkhqdqmgx" path="res://scenes/other/music_man.tscn" id="2_durxc"]
 [ext_resource type="PackedScene" uid="uid://ca0uwn1svite2" path="res://scenes/ui/cursor.tscn" id="4_0egcx"]
 [ext_resource type="PackedScene" uid="uid://cvg58y8qpiexs" path="res://scenes/ui/inventory.tscn" id="5_t46m6"]
+[ext_resource type="PackedScene" uid="uid://pmpla83gwfg2" path="res://scenes/ui/dialogue/dialogue.tscn" id="6_kkot5"]
 
 [node name="God" type="Node"]
 script = ExtResource("1_itcv6")
@@ -14,6 +15,13 @@ script = ExtResource("1_itcv6")
 [node name="MusicMan" parent="." instance=ExtResource("2_durxc")]
 
 [node name="Inventory" parent="." instance=ExtResource("5_t46m6")]
+z_index = 1
 position = Vector2(0, 238)
 
 [node name="Cursor" parent="." instance=ExtResource("4_0egcx")]
+top_level = true
+z_index = 1
+
+[node name="Dialogue" parent="." instance=ExtResource("6_kkot5")]
+offset_top = 119.0
+offset_bottom = 119.0

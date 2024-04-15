@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvjx8rcyws1is"
+path="res://.godot/imported/Tiki Bar Mixer.mp3-2fcb977038c7738906d33ba64d7b857a.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Tiki Bar Mixer.mp3"
+dest_files=["res://.godot/imported/Tiki Bar Mixer.mp3-2fcb977038c7738906d33ba64d7b857a.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

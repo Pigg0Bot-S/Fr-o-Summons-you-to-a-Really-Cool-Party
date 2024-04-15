@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://curq01bjatgfu"]
+
+[ext_resource type="PackedScene" uid="uid://comk7kt2bdaj8" path="res://scenes/objects/object_base.tscn" id="1_e5gvh"]
+[ext_resource type="Texture2D" uid="uid://c8v0lr3fwotm5" path="res://assets/sprites/objects/hell_toilet.png" id="2_b08mo"]
+
+[node name="HellToilet" instance=ExtResource("1_e5gvh")]
+object_id = "hell_toilet"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_b08mo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(-44, -67, -2, -66, 19, -58, 20, -3, 36, 11, 32, 33, 23, 50, 47, 56, 39, 65, -17, 65, -29, 62, -24, 55, -9, 55, -16, 31, -39, 22, -44, -7)

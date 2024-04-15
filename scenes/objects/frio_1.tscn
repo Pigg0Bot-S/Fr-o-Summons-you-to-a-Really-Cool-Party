@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnmfgvdpj1a10"]
+
+[ext_resource type="PackedScene" uid="uid://comk7kt2bdaj8" path="res://scenes/objects/object_base.tscn" id="1_vsh6o"]
+[ext_resource type="Texture2D" uid="uid://byoa7adtpysct" path="res://assets/sprites/characters/frio.png" id="2_6c6kc"]
+[ext_resource type="Script" path="res://scenes/objects/frio_1.gd" id="2_q2cru"]
+
+[node name="Frio1" instance=ExtResource("1_vsh6o")]
+script = ExtResource("2_q2cru")
+object_id = "frio1"
+enabled = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_6c6kc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(-16, 93, -36, 91, -38, 108, -45, 108, -45, 90, -66, 92, -44, 79, -41, 35, -36, 28, -40, 20, -46, 21, -52, 32, -54, 28, -52, 20, -51, 12, -56, 4, -53, -5, -46, 11, -37, 11, -32, -12, -42, -19, -70, -2, -70, 13, -76, 13, -79, 0, -81, 4, -85, 6, -84, 1, -90, 4, -91, 14, -89, 16, -93, 20, -100, 17, -94, 0, -86, -4, -76, -22, -61, -32, -15, -35, -23, -54, -41, -58, -45, -72, -57, -78, -59, -95, -48, -104, -11, -109, 25, -109, 43, -100, 56, -91, 63, -91, 63, -85, 59, -79, 45, -73, 45, -65, 48, -62, 41, -55, 32, -50, 32, -42, 25, -33, 43, -33, 53, -35, 64, -32, 80, -2, 91, 4, 97, 13, 100, 24, 95, 23, 88, 27, 82, 10, 78, 9, 75, 13, 76, 30, 71, 34, 66, 27, 65, 11, 68, 5, 56, -21, 34, -13, 38, 14, 30, 28, 37, 35, 34, 45, 39, 67, 36, 79, 55, 83, 52, 91, 34, 90, 34, 102, 22, 104, 21, 90, 13, 95, 4, 92, 11, 82, 20, 81, 16, 37, 12, 34, 19, 29, 18, 25, -25, 28, -22, 38, -33, 81, -15, 86)

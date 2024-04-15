@@ -7,6 +7,7 @@ func _ready():
 	Main.MusicMan = $MusicMan
 	Main.RoomMan = $RoomMan
 	Main.Cursor = $Cursor
+	Main.Dialogue = $Dialogue
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

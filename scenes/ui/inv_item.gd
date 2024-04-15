@@ -23,8 +23,9 @@ func _start_clicked():
 
 func _clicked():
 	dragged = false
-	for object in get_overlapping_areas():
-		object._item_interact(item_id, self)
+	if not Main.in_message:
+		for object in get_overlapping_areas():
+			object._item_interact(item_id, self)
 	return_home()
 	
 func object_hovered(new_hover: bool):

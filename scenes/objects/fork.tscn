@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://tba057c3dvmq"]
+
+[ext_resource type="PackedScene" uid="uid://comk7kt2bdaj8" path="res://scenes/objects/object_base.tscn" id="1_36uik"]
+[ext_resource type="Texture2D" uid="uid://b2vq52ger1m4f" path="res://assets/sprites/objects/fork.png" id="2_8dhdu"]
+[ext_resource type="Script" path="res://scenes/objects/fork.gd" id="2_ek6e7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4mtyr"]
+radius = 11.6459
+height = 53.8394
+
+[node name="Fork" instance=ExtResource("1_36uik")]
+script = ExtResource("2_ek6e7")
+object_id = "hell_fork"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_8dhdu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+position = Vector2(2, 0)
+rotation = -0.487959
+shape = SubResource("CapsuleShape2D_4mtyr")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://b82ulumuxkgh6"]
+
+[ext_resource type="PackedScene" uid="uid://60keftn7r47w" path="res://scenes/rooms/room_2d.tscn" id="1_c37xr"]
+[ext_resource type="Texture2D" uid="uid://dri14etpivwg0" path="res://assets/sprites/backgrounds/hell_bathroom.png" id="2_7y0ic"]
+[ext_resource type="PackedScene" uid="uid://ugy0urojheqi" path="res://scenes/objects/hell_bathroom_door.tscn" id="3_ucy8e"]
+[ext_resource type="PackedScene" uid="uid://curq01bjatgfu" path="res://scenes/objects/hell_toilet.tscn" id="4_0avhj"]
+[ext_resource type="PackedScene" uid="uid://ce27p54p8itvb" path="res://scenes/objects/goblin.tscn" id="5_mqnwr"]
+[ext_resource type="PackedScene" uid="uid://c0s1kp5mcquf2" path="res://scenes/objects/hell_sink.tscn" id="6_fbuos"]
+
+[node name="HellBathroom" instance=ExtResource("1_c37xr")]
+texture = ExtResource("2_7y0ic")
+song = "shaving_mirror"
+
+[node name="DoorBase" parent="." index="0" instance=ExtResource("3_ucy8e")]
+position = Vector2(415, 147)
+
+[node name="HellToilet" parent="." index="1" instance=ExtResource("4_0avhj")]
+position = Vector2(295, 143)
+
+[node name="Goblin" parent="." index="2" instance=ExtResource("5_mqnwr")]
+position = Vector2(295, 143)
+
+[node name="HellSink" parent="." index="3" instance=ExtResource("6_fbuos")]
+position = Vector2(142, 151)

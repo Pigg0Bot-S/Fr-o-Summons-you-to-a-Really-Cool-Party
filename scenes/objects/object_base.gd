@@ -10,15 +10,22 @@ var hovered : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	if not Main.object_states.has(object_id):
+		_first_instance()
 		Main.object_states[object_id] = {"enabled": enabled}
 	
 	if not Main.object_states[object_id].enabled:
 			process_mode = Node.PROCESS_MODE_DISABLED
 			hide()
-	_init_object()
+	
 	object_data = Main.object_states[object_id]
+	_init_object()
+	
 	_object_ready()
+
+func _first_instance():
+	pass
 
 func _object_ready():
 	pass

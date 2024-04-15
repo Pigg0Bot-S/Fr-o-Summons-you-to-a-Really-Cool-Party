@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnlary0syov3s"]
+
+[ext_resource type="PackedScene" uid="uid://comk7kt2bdaj8" path="res://scenes/objects/object_base.tscn" id="1_u8pww"]
+[ext_resource type="Script" path="res://scenes/objects/money_1.gd" id="2_3tub0"]
+[ext_resource type="Texture2D" uid="uid://drqgo1jl0up0h" path="res://assets/sprites/objects/money1.png" id="2_s5vo4"]
+
+[node name="Money1" instance=ExtResource("1_u8pww")]
+script = ExtResource("2_3tub0")
+object_id = "money1"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_s5vo4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(-32, -9, -21, -1, -8, -1, 10, -20, 32, -12, 31, 5, 24, 2, 12, 4, 4, 18, -31, 22)

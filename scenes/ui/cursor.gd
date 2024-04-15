@@ -20,6 +20,10 @@ func _process(delta):
 	var layer_3 : bool = false
 	
 	if not locked_mouse:
+		if Main.in_message:
+			layer_3 = true
+			sel_object = hovered_object.get_ref()
+		
 		if objects:
 			for clickable : Area2D in objects:
 				if clickable.get_collision_layer_value(3):
@@ -39,7 +43,10 @@ func _process(delta):
 			hovered_object = WeakRef.new()
 	else:
 		sel_object = hovered_object.get_ref()
-	
+		
+	decide_cursor_anim()
+	#if Main.in_message and not locked_mouse:
+		#return
 	
 	if Input.is_action_just_pressed("click") and sel_object:
 		if sel_object is InventoryItem:
@@ -51,7 +58,7 @@ func _process(delta):
 		locked_mouse = false
 		hovered_object.get_ref()._clicked()
 		
-	decide_cursor_anim()
+	
 
 func decide_cursor_anim():
 	

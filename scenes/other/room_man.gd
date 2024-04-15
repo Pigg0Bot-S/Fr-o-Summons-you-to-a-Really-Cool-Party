@@ -10,7 +10,7 @@ var new_room : Dictionary = {"switching": false, "room": ""}
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	await get_tree().create_timer(0.1).timeout
-	set_room("intro_room")
+	set_room("hell_bar")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,7 +25,7 @@ func _process(delta):
 func switch_room(switched_room : String):
 	new_room.room = switched_room
 	new_room.switching = true
-	get_child(1).process_mode = Node.PROCESS_MODE_DISABLED
+	pause(true)
 	fade_in(1)
 
 func set_room(new_room : String):
@@ -35,9 +35,13 @@ func set_room(new_room : String):
 	add_child(Main.get_room(new_room).instantiate())
 	fade_out(1)
 	
+func pause(to_pause : bool):
+	var my_room = get_child(1)
 	
-	
-	
+	if to_pause:
+		my_room.process_mode = Node.PROCESS_MODE_DISABLED
+	else:
+		my_room.process_mode = Node.PROCESS_MODE_INHERIT
 
 func fade_in(fade_time : float):
 	

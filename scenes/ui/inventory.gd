@@ -14,6 +14,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Main.in_message:
+		set_open(false)
+		return
+	
 	if Input.is_action_just_pressed("open_inventory") and not has_overlapping_areas():
 		set_open(not open)
 	
@@ -56,3 +60,8 @@ func add_item(new_item : String):
 	
 	ItemHolder.add_child(item)
 	set_open(true)
+
+func remove_item(item_name : String):
+	for child in ItemHolder.get_children():
+		if child.item_id == item_name:
+			child.consume()

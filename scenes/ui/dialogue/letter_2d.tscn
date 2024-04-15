@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmy7ic1t80eb"]
+
+[ext_resource type="Shader" path="res://scenes/ui/dialogue/dialogue.gdshader" id="1_jlrny"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rhic8"]
+shader = ExtResource("1_jlrny")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/text_color = Color(1, 1, 1, 1)
+
+[node name="Letter2D" type="Sprite2D"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_rhic8")
+centered = false
+region_enabled = true

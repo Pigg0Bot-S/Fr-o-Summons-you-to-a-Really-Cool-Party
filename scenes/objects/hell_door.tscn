@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvljjmc3ep2c7"]
+
+[ext_resource type="PackedScene" uid="uid://c7x3masucbk25" path="res://scenes/objects/door_base.tscn" id="1_6yvd8"]
+[ext_resource type="Script" path="res://scenes/objects/hell_door.gd" id="2_230j4"]
+[ext_resource type="Texture2D" uid="uid://dc1l4wn2xb8xu" path="res://assets/sprites/objects/hell_door.png" id="2_fna57"]
+[ext_resource type="AudioStream" uid="uid://chu5qmuvnf0av" path="res://assets/sfx/boom.wav" id="4_dkodc"]
+
+[node name="HellDoor" instance=ExtResource("1_6yvd8")]
+script = ExtResource("2_230j4")
+target_room = "hell_bathroom"
+object_id = "hell_door"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_fna57")
+hframes = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
+polygon = PackedVector2Array(-35, 59, -14, -49, 0, -59, 17, -52, 33, -11, 34, 37)
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("4_dkodc")

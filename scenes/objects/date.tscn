@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7y5yf6qh25yx"]
+
+[ext_resource type="PackedScene" uid="uid://comk7kt2bdaj8" path="res://scenes/objects/object_base.tscn" id="1_7ftfs"]
+[ext_resource type="Script" path="res://scenes/objects/date.gd" id="2_48qbs"]
+[ext_resource type="Texture2D" uid="uid://d1xmlplplohrl" path="res://assets/sprites/objects/date.png" id="2_pkydf"]
+
+[node name="Date" instance=ExtResource("1_7ftfs")]
+script = ExtResource("2_48qbs")
+object_id = "date"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_pkydf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(-84, -18, -78, -58, -39, -74, 20, -64, 64, -20, 69, 14, 81, 25, 76, 69, -48, 62, -27, 48, -28, -3)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcki2h3q2vph6"]
+
+[ext_resource type="PackedScene" uid="uid://c7x3masucbk25" path="res://scenes/objects/door_base.tscn" id="1_yndd0"]
+[ext_resource type="Texture2D" uid="uid://cf8yxf17h0jn1" path="res://assets/sprites/objects/hell_stairs2.png" id="2_um1pp"]
+
+[node name="HellStairs2" instance=ExtResource("1_yndd0")]
+target_room = "hell_bar"
+object_id = "hell_stairs2"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_um1pp")
+hframes = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
+polygon = PackedVector2Array(-96, -14, -76, -16, -3, -16, 18, -21, 96, -21, 96, 21, 81, 18, -38, 18, -64, 12, -85, -9)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ugy0urojheqi"]
+
+[ext_resource type="PackedScene" uid="uid://c7x3masucbk25" path="res://scenes/objects/door_base.tscn" id="1_k2ioy"]
+[ext_resource type="Texture2D" uid="uid://5vaa8ci78tjj" path="res://assets/sprites/objects/in_bathroom_door.png" id="2_ha4uo"]
+
+[node name="DoorBase" instance=ExtResource("1_k2ioy")]
+target_room = "hell_bar"
+object_id = "hell_bathroom_door"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_ha4uo")
+hframes = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
+polygon = PackedVector2Array(-57, 44, -27, -32, 4, -51, 22, -51, 47, -14, 55, 50, 4, 41)

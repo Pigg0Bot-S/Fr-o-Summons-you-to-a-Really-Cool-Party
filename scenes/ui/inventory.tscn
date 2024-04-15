@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvg58y8qpiexs"]
+[gd_scene load_steps=11 format=3 uid="uid://cvg58y8qpiexs"]
 
 [ext_resource type="Script" path="res://scenes/ui/inventory.gd" id="1_5e3jd"]
 [ext_resource type="Texture2D" uid="uid://5fixd6ek75co" path="res://assets/sprites/ui/inventory.png" id="1_jn3ux"]
+[ext_resource type="PackedScene" uid="uid://ruodeje7v6bd" path="res://scenes/ui/inv_item.tscn" id="3_b5bd3"]
 [ext_resource type="AudioStream" uid="uid://br7muxbvspc6" path="res://assets/sfx/close_inventory.wav" id="3_onora"]
 [ext_resource type="AudioStream" uid="uid://buglxrotk581f" path="res://assets/sfx/open_inventory.wav" id="3_togb2"]
 
@@ -104,6 +105,9 @@ shape = SubResource("RectangleShape2D_klkmt")
 position = Vector2(-239.5, -16)
 texture = ExtResource("1_jn3ux")
 centered = false
+
+[node name="InvItem" parent="CollisionShape2D/Sprite2D" instance=ExtResource("3_b5bd3")]
+item_id = "wallet"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0s1kp5mcquf2"]
+
+[ext_resource type="PackedScene" uid="uid://comk7kt2bdaj8" path="res://scenes/objects/object_base.tscn" id="1_4ihlg"]
+[ext_resource type="Texture2D" uid="uid://bt6n0xeu2nd5r" path="res://assets/sprites/objects/evil_sink.png" id="2_euqru"]
+
+[node name="HellSink" instance=ExtResource("1_4ihlg")]
+object_id = "hell_sink"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_euqru")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." index="1"]
+position = Vector2(16.5, 0)
+polygon = PackedVector2Array(-91.5, 60, -91.5, 6, -64.5, -10, 26.5, -11, 59.5, 4, 59.5, 63, -19.5, 57)

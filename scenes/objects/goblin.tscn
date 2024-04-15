@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce27p54p8itvb"]
+
+[ext_resource type="PackedScene" uid="uid://comk7kt2bdaj8" path="res://scenes/objects/object_base.tscn" id="1_htb5m"]
+[ext_resource type="Texture2D" uid="uid://dlhm3fisomhvr" path="res://assets/sprites/objects/goblin.png" id="2_nbxxe"]
+[ext_resource type="Script" path="res://scenes/objects/goblin.gd" id="2_y55ui"]
+
+[node name="Goblin" instance=ExtResource("1_htb5m")]
+script = ExtResource("2_y55ui")
+object_id = "goblin"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
+polygon = PackedVector2Array(-95, -46, -72, -54, -67, -37, -32, -26, -38, -33, -38, -82, -18, -80, -6, -64, 18, -76, 32, -73, 37, -30, 27, -22, 28, -15, 48, -19, 60, -42, 78, -48, 75, -28, 29, 4, 50, 25, 49, 69, 63, 79, 55, 98, 39, 88, 36, 28, 27, 22, 14, 23, 16, 70, 10, 90, -11, 97, -7, 91, -20, 78, 4, 73, 4, 46, -7, 21, -14, 21, -30, -12, -65, -14, -89, -29)
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_nbxxe")

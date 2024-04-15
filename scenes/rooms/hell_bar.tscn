@@ -1,0 +1,26 @@
+[gd_scene load_steps=8 format=3 uid="uid://co48qwfxulf8r"]
+
+[ext_resource type="PackedScene" uid="uid://60keftn7r47w" path="res://scenes/rooms/room_2d.tscn" id="1_rfgy2"]
+[ext_resource type="Texture2D" uid="uid://cnx73kjt4d540" path="res://assets/sprites/backgrounds/hell_bar.png" id="2_ma6cw"]
+[ext_resource type="Script" path="res://scenes/rooms/hell_bar.gd" id="3_eq2ww"]
+[ext_resource type="PackedScene" uid="uid://tba057c3dvmq" path="res://scenes/objects/fork.tscn" id="3_psexc"]
+[ext_resource type="PackedScene" uid="uid://c7y5yf6qh25yx" path="res://scenes/objects/date.tscn" id="4_1nqai"]
+[ext_resource type="PackedScene" uid="uid://cvljjmc3ep2c7" path="res://scenes/objects/hell_door.tscn" id="5_agikb"]
+[ext_resource type="PackedScene" uid="uid://sc2c2fq67r5k" path="res://scenes/objects/hell_stairs.tscn" id="7_k64ao"]
+
+[node name="HellBar" instance=ExtResource("1_rfgy2")]
+texture = ExtResource("2_ma6cw")
+script = ExtResource("3_eq2ww")
+song = "tiki_bar_mixer"
+
+[node name="Fork" parent="." index="0" instance=ExtResource("3_psexc")]
+position = Vector2(260, 208)
+
+[node name="Date" parent="." index="1" instance=ExtResource("4_1nqai")]
+position = Vector2(387, 25)
+
+[node name="HellDoor" parent="." index="2" instance=ExtResource("5_agikb")]
+position = Vector2(45, 87)
+
+[node name="HellStairs" parent="." index="3" instance=ExtResource("7_k64ao")]
+position = Vector2(222, 46)
